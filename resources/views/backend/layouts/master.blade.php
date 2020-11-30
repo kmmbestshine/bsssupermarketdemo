@@ -6,8 +6,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="{{asset('images/user.png')}}" rel="icon" type="image/x-icon"/>
-    <link href="{{asset('images/user.png')}}" rel="shortcut icon" type="image/x-icon"/>
+    <link href="{{asset('images/user.jpg')}}" rel="icon" type="image/x-icon"/>
+    <link href="{{asset('images/user.jpg')}}" rel="shortcut icon" type="image/x-icon"/>
     <title>@Yield('title')</title>
 
     <!-- Bootstrap -->
@@ -35,7 +35,7 @@
                 <!-- menu profile quick info -->
                 <div class="profile clearfix">
                     <div class="profile_pic">
-                        <img src="{{asset('images/user.png')}}" alt="..." class="img-circle profile_img">
+                        <img src="{{asset('images/user.jpg')}}" alt="..." class="img-circle profile_img">
                     </div>
                     <div class="profile_info">
                         <span>Welcome,</span>
@@ -93,7 +93,7 @@
                         <li class="">
                             <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown"
                                aria-expanded="false">
-                                <img src="{{asset('images/user.png')}}" alt="">{{ Auth::user()->name}}
+                                <img src="{{asset('images/user.jpg')}}" alt="">{{ Auth::user()->name}}
                                 <span class="fa fa-power-off"></span>
                             </a>
                             <ul class="dropdown-menu dropdown-usermenu pull-right">
@@ -111,7 +111,7 @@
                             <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
                                 <li>
                                     <a>
-                                        <span class="image"><img src="{{asset('images/user.png')}}" alt="Profile Image"/></span>
+                                        <span class="image"><img src="{{asset('images/user.jpg')}}" alt="Profile Image"/></span>
                                         <span>
                                             <span>Notification</span>
                                             <span class="time">20 minuts ago</span>
