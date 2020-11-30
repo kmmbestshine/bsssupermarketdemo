@@ -33,7 +33,7 @@
     @endif
     <form class="form-vertical" action="{{route('user.check')}}" method="post">
         {{csrf_field()}}
-        <div class="control-group normal_text"><h3><img src="{{asset('images/user.jpg')}}" height="100" width="100" alt="Logo"/></h3></div>
+        <div class="control-group normal_text"><h3><img src="{{asset('images/user2.png')}}" height="100" width="100" alt="Logo"/></h3></div>
         <div class="control-group">
             <div class="controls">
                 <div class="main_input_box">
