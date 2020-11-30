@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="{{asset('images/user.png')}}" rel="icon" type="image/x-icon"/>
     <link href="{{asset('images/user.png')}}" rel="shortcut icon" type="image/x-icon"/>
-    <title>Nagarik Bazar Admin/User Login</title>
+    <title>BSS Bazar Admin/User Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="{{asset('backend/login/css/bootstrap.min.css')}}"/>
     <link rel="stylesheet" href="{{asset('backend/login/css/bootstrap-responsive.min.css')}}"/>
@@ -33,7 +33,7 @@
     @endif
     <form class="form-vertical" action="{{route('user.check')}}" method="post">
         {{csrf_field()}}
-        <div class="control-group normal_text"><h3><img src="{{asset('images/user.png')}}" height="100" width="100" alt="Logo"/></h3></div>
+        <div class="control-group normal_text"><h3><img src="{{asset('images/user.jpg')}}" height="100" width="100" alt="Logo"/></h3></div>
         <div class="control-group">
             <div class="controls">
                 <div class="main_input_box">

@@ -1,6 +1,6 @@
 @extends('backend.layouts.master')
 @section('title')
-    NagarikBazar Dashboard Page
+    BSS Bazar Dashboard Page
 @endsection
 @section('css')
     <link rel="stylesheet" href="{{asset('backend/plugins/select2.min.css')}}">
