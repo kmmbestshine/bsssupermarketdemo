@@ -19,7 +19,7 @@ class PermissionController extends Controller
     {
         $this->checkpermission('permission-list');
         $permission = Permission::all();
-        return view('backend.permission.list', compact('permission','check'));
+        return view('backend.permission.list', compact('permission'));
     }
 
     /**
