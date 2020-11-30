@@ -93,11 +93,11 @@
                                                     <a href="{{route('module.edit',$m->id)}}" class="btn btn-info "><i class="fa fa-pencil"></i> Edit</a>
                                                 </div>
                                                 <div class="col-md-5">
-                                                    <form action="" method="post">
+                                                  {{--  <form action="" method="post">
                                                         <input type="hidden" name="_method" value="DELETE">
                                                         {{ csrf_field()}}
                                                         <button class="btn btn-danger" type="submit" onclick= "return confirm('are you sure to delete?')"><i class="fa fa-trash-o" disabled></i> Delete</button>
-                                                    </form>
+                                                    </form> --}}
                                                 </div>
                                             </div>
                                         </td>
