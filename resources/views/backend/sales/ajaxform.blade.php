@@ -27,7 +27,7 @@
             <div style="border:1px solid #cccccc; float:left; padding-bottom:1000px; margin-bottom:-1000px" >
                 <span>Invoice Status :-</span>
                 <select id = "invoice_status" onchange = "ShowHideDiv()" >
-                   <option value="N" selected>Cash</option>
+                   <option value="N" selected>Paid</option>
                     <option value="N" >Quote</option>
                     <option value="Y">Unpaid</option>
                     <option value="Y">Partial</option>          
