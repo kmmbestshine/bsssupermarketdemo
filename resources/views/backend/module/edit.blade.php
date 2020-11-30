@@ -101,24 +101,30 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Disply in Sidebar</label>
-                                    <input type="radio" name="view_sidebar" value="{{$module->view_sidebar}}" id="view_sidebar" checked="">
+                                    <input type="radio" name="view_sidebar" value="1" id="view_sidebar" checked="">
                                     <label for="view_sidebar"> Yes </label>
                                     <input type="radio" name="view_sidebar" id="deactive" value="0">
                                     <label for="deactive">No</label>
                                 </div>
-                                <div class="form-group">
+                                 <div class="form-group">
                                     <label>Display For &nbsp;</label>
-                                    @foreach($role as $key => $r)
-                                    
-                                    @if($r->id == $role_id[$key])
-                                        <input type="checkbox" id="{{$r->name}}" name="roles[]" value="{{$r->id}}" checked><label for="{{$r->name}}">{{$r->name}}</label>
-                                         
-                                    @else
+                                    <input type="checkbox" name="roles[]" value="{{$role[0]->id}}" {{ (in_array($role[0]->id, $matched_roleid)) ? 'checked="checked" ' : '' }}>
+                                    <label for="{{$role[0]->name}}">{{$role[0]->name}}</label>
+                                    <input type="checkbox" name="roles[]" value="{{$role[1]->id}}" {{ (in_array($role[1]->id, $matched_roleid)) ? 'checked="checked" ' : '' }}>
+                                    <label for="{{$role[1]->name}}">{{$role[1]->name}}</label>
+                                    <input type="checkbox" name="roles[]" value="{{$role[2]->id}}" {{ (in_array($role[2]->id, $matched_roleid)) ? 'checked="checked" ' : '' }}>
+                                    <label for="{{$role[2]->name}}">{{$role[2]->name}}</label>
 
-                                        <input type="checkbox" id="{{$r->name}}" name="roles[]" value="{{$r->id}}" ><label for="{{$r->name}}">{{$r->name}}</label>
-                                        @endif
-                                    @endforeach
+                                    <input type="checkbox" name="roles[]" value="{{$role[3]->id}}" {{ (in_array($role[3]->id, $matched_roleid)) ? 'checked="checked" ' : '' }}>
+                                    <label for="{{$role[3]->name}}">{{$role[3]->name}}</label>
+                                    <input type="checkbox" name="roles[]" value="{{$role[4]->id}}" {{ (in_array($role[4]->id, $matched_roleid)) ? 'checked="checked" ' : '' }}>
+                                    <label for="{{$role[4]->name}}">{{$role[4]->name}}</label>
+                                    <input type="checkbox" name="roles[]" value="{{$role[5]->id}}" {{ (in_array($role[5]->id, $matched_roleid)) ? 'checked="checked" ' : '' }}>
+                                    <label for="{{$role[5]->name}}">{{$role[5]->name}}</label>
+                                    <input type="checkbox" name="roles[]" value="{{$role[6]->id}}" {{ (in_array($role[6]->id, $matched_roleid)) ? 'checked="checked" ' : '' }}>
+                                    <label for="{{$role[6]->name}}">{{$role[6]->name}}</label>
                                 </div>
+                                
                                 <!-- /.box-body -->
                                 <div class="box-footer">
                                     <button type="submit" name="btnCreate" class="btn btn-primary">Update Module</button>

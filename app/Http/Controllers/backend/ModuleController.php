@@ -91,24 +91,15 @@ class ModuleController extends Controller
         $module = Module::find($id);
         $role = Role::all();
         $rolemodule = RoleModule::where('module_id',$id)->get();
-        foreach ($rolemodule as $key => $value) {
-           $role_id[]=$value->role_id;
+        foreach ($role as  $r) {
+           $role_id[]=$r->id;
         }
-        foreach ($role_id as $rm ) {
-            $checked_role = Role::where('id',$rm)->get();
-             dd($checked_role);
 
-            foreach ($checked_role as $rm1 ) {
+        foreach ($rolemodule as  $rm) {
 
-                $rm->che_role_name=$rm1->name;
-                $rm->che_role_id=$rm1->id;
-               
-            }
-           
-            
+           $matched_roleid[]=$rm->role_id;
         }
-       
-        return view('backend.module.edit',compact('module','role','role_id'));
+        return view('backend.module.edit',compact('module','role','rolemodule','role_id','matched_roleid'));
     }
     /**
      * Update the specified resource in storage.
@@ -119,6 +110,9 @@ class ModuleController extends Controller
      */
     public function update(Request $request, $id)
     {
+         $input = $request->all();
+        
+       // dd($request->roles,$request->roles1);
         $this->validate($request, [
             'name' => 'required',
             //'module_key' => 'required|unique:modules',
@@ -137,13 +131,29 @@ class ModuleController extends Controller
         $module = $pc->update();
         
         if ($module) {
-            foreach ($request->roles as $role) {
-                
-                $rolemodule = RoleModule::where('module_id',$id)->first();
-                $rolemodule->module_id = $id;
-                $rolemodule->role_id = $role;
-                $rolemodule->update();
+            $rm_role=DB::table('role_modules')->where('module_id',$id)->get();
+            foreach ($rm_role as  $rm) {
+               $rm_roleid[]=$rm->role_id;
             }
+            $result=array_diff($rm_roleid,$request->roles);
+            if($result){
+                foreach ($result as  $remove_roleid) {
+                $check=DB::table('role_modules')->where('module_id',$id)->where('role_id',$remove_roleid)->delete();
+            }
+         }
+            
+           // dd($result);
+            for ($i=0; $i<count($request->roles); $i++) {
+                $check=DB::table('role_modules')->where('module_id',$id)->where('role_id',$request->roles[$i])->first();
+                if(empty($check)){
+                    DB::table('role_modules')->insert([
+                             'module_id' => $id,
+                            'role_id' => $request->roles[$i],
+             
+                    ]);
+                }
+                } 
+            
             return redirect()->route('module.list')->with('success_message', 'You are successfully Updated');
         } else {
             return redirect()->route('module.create')->with('error_message', 'You con not Updated rignt now');
