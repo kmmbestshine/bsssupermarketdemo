@@ -78,30 +78,30 @@
                                     </tr>
                                     </tfoot>
                                     <tbody>
-                                    
+                                    @foreach($dates as $key => $date)
                                         <tr>
                                             <td>{{ $key + 1 }}</td>
-                                            <td>{{ date("l, d F Y", strtotime($dates->date)) }}</td>
+                                            <td>{{ date("l, d F Y", strtotime($date->date)) }}</td>
                                             <td>
-                                                <a href="{{ route('backend.attendance.show', date("Y-m-d", strtotime($dates->date))) }}" class="btn
+                                                <a href="{{ route('backend.attendance.show', date("Y-m-d", strtotime($date->date))) }}" class="btn
                                                     btn-info">
                                                     <i class="fa fa-eye" aria-hidden="true"></i>
                                                 </a>
-                                               <a href="{{ route('backend.attendance.edit', date("Y-m-d", strtotime($dates->date))) }}" class="btn
+                                               <a href="{{ route('backend.attendance.edit', date("Y-m-d", strtotime($date->date))) }}" class="btn
                                                     btn-info">
                                                     <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                                 </a>
-                                                 <button class="btn btn-danger" type="button" onclick="deleteItem({{ date("Ymd", strtotime($dates->date)) }})">
+                                                 <button class="btn btn-danger" type="button" onclick="deleteItem({{ date("Ymd", strtotime($date->date)) }})">
                                                     <i class="fa fa-trash" aria-hidden="true"></i>
                                                 </button>
-                                                <form id="delete-form-{{ date("Ymd", strtotime($date->date)) }}" action="{{ route('backend.attendance.destroy', date("Y-m-d", strtotime($dates->date))) }}" method="post"
+                                                <form id="delete-form-{{ date("Ymd", strtotime($date->date)) }}" action="{{ route('backend.attendance.destroy', date("Y-m-d", strtotime($date->date))) }}" method="post"
                                                       style="display:none;">
                                                     {{ csrf_field()}}
                                                     @method('DELETE')
                                                 </form>
                                             </td>
                                         </tr>
-                                    
+                                    @endforeach
                                     </tbody>
 
                                 </table>
