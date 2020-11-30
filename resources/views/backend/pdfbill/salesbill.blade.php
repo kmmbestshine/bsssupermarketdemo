@@ -6,19 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head><body>
-<p align="center"><strong>Grocery Management System (GMS)</strong></p>
-<p align="center">Baneshwor Kathmandu</p>
-<p align="center">PH: 977-01-4783838</p>
+<p align="center"><strong>Bestshine Bazar Management System</strong></p>
+<p align="center">Trichy</p>
+<p align="center">PH: 95666 21401</p>
 <p align="center">PAN No: 603655986</p>
 <hr>
-<p>Date: 2017-05-09</p>
+<p>Date: <?php echo date("d-m-Y");?></p>
 <hr>
 <table border="0" align="center">
     <thead>
     <tr>
         <th>S.N.</th>
         <th>Product Name</th>
+        <th>Units</th>
         <th>Quantity</th>
+        <th>Price/Unit</th>
+        <th>GST %</th>
+        <th>GST Value</th>
         <th>Price</th>
     </tr>
     </thead>
@@ -28,8 +32,12 @@
     <tr>
         <td>{{$i++}}</td>
         <td>{{$all->name}}</td>
+        <td>{{$all->unit}}</td>
         <td>{{$all->quantity}}</td>
-        <td>{{$all->price}}</td>
+        <td>{{$all->pro_price}}</td>
+        <td>{{$all->taxpercent}}%</td>
+        <td>{{$all->taxRate}}</td>
+        <td>{{$all->saleValue}}</td>
     </tr>
     @endforeach
     <tr>
@@ -39,7 +47,7 @@
             @if($report)
                 @foreach($report as $s)
                     @php
-                        $price = $s->price;
+                        $price = $s->saleValue;
                         $total += $price;
                     @endphp
                 @endforeach
@@ -50,7 +58,7 @@
     </tbody>
 </table>
 <br>
-<p>prepared by: Srada &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Time: 12:06:46</p>
+<p>prepared by: Srada &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Time: <?php  echo time() ; ?></p>
 <p align="center">Thank You</p>
 </body></html>
 
