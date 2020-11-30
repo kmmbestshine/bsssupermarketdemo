@@ -69,7 +69,7 @@
                                                 <tr>
                                                     <th>Serial</th>
                                                     <th>Name</th>
-                                                    <th>Photo</th>
+                                                  <!--  <th>Photo</th> -->
                                                     <th>Attendance</th>
                                                 </tr>
                                             </thead>
@@ -80,9 +80,9 @@
                                                         <tr>
                                                             <td>{{ $key+1 }}</td>
                                                             <td>{{ $employee->name }}</td>
-                                                            <td>
+                                                         <!--   <td>
                                                                 <img width="40" height="40" class="img-fluid img-rounded" src="{{ URL::asset('storage/employee/'. $employee->photo) }}" alt="{{ $employee->name }}">
-                                                            </td>
+                                                            </td> -->
                                                             <input type="hidden" name="employee_id[]" value="{{ $employee->id }}">
                                                             <td>
                                                                 <input type="radio" name="attendance[{{ $employee->id }}]" value="1" required>Present
