@@ -20,7 +20,7 @@ class SalesController extends Controller
     {
         $this->checkpermission('sales-create');
         $salescart = Salescart::all();
-        return view('backend.sales.create', compact('sales', 'salescart'));
+        return view('backend.sales.create', compact( 'salescart'));
     }
 
     public function store(Request $request)
