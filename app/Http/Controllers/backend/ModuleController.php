@@ -125,7 +125,7 @@ class ModuleController extends Controller
         $pc->name=$request->name;
         $pc->module_key=$request->module_key;
         $pc->module_url=$request->module_url;
-        $pc->view_sidebar=$request->view_sidebar;
+       // $pc->view_sidebar=$request->view_sidebar;
         $pc->module_icon=$request->module_icon;
         $pc->module_rank=$request->module_rank;
         $pc->updated_at= date('Y-m-d H:i:s');

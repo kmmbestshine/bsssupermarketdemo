@@ -99,13 +99,13 @@
                                     <label for="module_icon">Module Icon</label>
                                     <input type="text" class="form-control" id="module_icon" name="module_icon" value="{{$module->module_icon}}">
                                 </div>
-                                <div class="form-group">
+                              {{--  <div class="form-group">
                                     <label>Disply in Sidebar</label>
                                     <input type="radio" name="view_sidebar" value="1" id="view_sidebar" checked="">
                                     <label for="view_sidebar"> Yes </label>
                                     <input type="radio" name="view_sidebar" id="deactive" value="0">
                                     <label for="deactive">No</label>
-                                </div>
+                                </div> --}}
                                  <div class="form-group">
                                     <label>Display For &nbsp;</label>
                                     <input type="checkbox" name="roles[]" value="{{$role[0]->id}}" {{ (in_array($role[0]->id, $matched_roleid)) ? 'checked="checked" ' : '' }}>
