@@ -50,6 +50,11 @@ class ProductController extends Controller
             'code' => 'required|unique:products',
             'quantity' => 'required',
             'price' => 'required',
+            'taxRate'           => 'required',
+            'cessValue'         => 'required',
+            'unit'              => 'required',
+            'type'              => 'required',
+            'discountRate'     => 'required',
         ]);
         $message = Product::create([
             'productcategory_id' => $request->productcategory_id,
@@ -59,6 +64,11 @@ class ProductController extends Controller
             'stock' => $request->quantity,
             'price' => $request->price,
             'status' => $request->status,
+            'taxRate' => $request->taxRate,
+            'cessValue' => $request->cessValue,
+            'unit' => $request->unit,
+            'type' => $request->type,
+            'discountRate' => $request->discountRate,
             'created_by' => Auth::user()->username,
             'created_at' => date('Y-m-d H:i:s'),
         ]);
