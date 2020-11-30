@@ -6,8 +6,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="{{asset('images/user.jpg')}}" rel="icon" type="image/x-icon"/>
-    <link href="{{asset('images/user.jpg')}}" rel="shortcut icon" type="image/x-icon"/>
+    <link href="{{asset('images/user2.png')}}" rel="icon" type="image/x-icon"/>
+    <link href="{{asset('images/user2.png')}}" rel="shortcut icon" type="image/x-icon"/>
     <title>@Yield('title')</title>
 
     <!-- Bootstrap -->
