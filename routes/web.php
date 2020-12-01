@@ -118,7 +118,7 @@ Route::group(['middleware' => 'Revalidate'],function() {
         Route::get('/transaction-update/{id}', ['as' => 'transaction.update', 'uses' => 'backend\TransactionController@update']);
         Route::get('/transaction-report', ['as' => 'transaction.report', 'uses' => 'backend\TransactionController@export']);
 
-        Route::get('/profile_create', ['as' => 'profile.create', 'uses' => 'backend\CompanyprofileController@index']);
+        Route::get('/setting-index', ['as' => 'profile.create', 'uses' => 'backend\CompanyprofileController@index']);
         Route::post('/companyprofile/update/{id}', ['as' => 'Settings.profile.update', 'uses' => 'backend\CompanyprofileController@update']);
         Route::get('/invoice-create', ['as' => 'invoice.profile.create', 'uses' => 'backend\InvoiceprofileController@index']);
         Route::post('/invoiceprofile/update/{id}', ['as' => 'Settings.invoice.update', 'uses' => 'backend\InvoiceprofileController@update']);
