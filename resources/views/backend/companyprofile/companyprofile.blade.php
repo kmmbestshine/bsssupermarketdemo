@@ -64,7 +64,7 @@
                                         {{ csrf_field()}}
                                 
                                         <div class="form-group row">
-                                            <label for="businessName" class="col-md-12 col-form-label">@lang('laryl-settings.form.profile.label.businessName')</label>
+                                            <label for="businessName" class="col-md-12 col-form-label">@lang('businessName')</label>
                                 
                                             <div class="col-md-12">
                                                 <input id="businessName" type="text" class="form-control t-cap" name="businessName" value="{{ $setting->businessName }}" autofocus>
@@ -80,7 +80,7 @@
                                         <div class="form-group row">
                                             <div class="col-sm-6 col-md-6">
                                                 <div class="row">
-                                                    <label for="address" class="col-auto col-form-label">@lang('laryl-settings.form.profile.label.address')</label>
+                                                    <label for="address" class="col-auto col-form-label">@lang('address')</label>
             
                                                     <div class="col-md-12">
                                                         <textarea id="address" rows=4 class="form-control autosize t-cap" name="address">{{old('address', $setting->address)}}</textarea>
@@ -96,7 +96,7 @@
                                     
                                             <div class="col-sm-6 col-md-6">
                                                 <div class="row">
-                                                    <label for="placeOfOrigin" class="col-md-12 col-form-label">@lang('laryl-settings.form.profile.label.placeOfOrigin')</label>
+                                                    <label for="placeOfOrigin" class="col-md-12 col-form-label">@lang('placeOfOrigin')</label>
                     
                                                     <div class="col-md-12">
                                                         <select id="placeOfOrigin" name="placeOfOrigin" class="form-control bfh-states" data-country="India" data-state="{{ old('placeOfOrigin', $setting->placeOfOrigin) }}"></select>
@@ -115,7 +115,7 @@
 
                                             <div class="col-md-6">
                                                 <div class="form-group row">
-                                                    <label for="gstin" class="col-md-12 col-form-label">@lang('laryl-settings.form.profile.label.gstin')</label>
+                                                    <label for="gstin" class="col-md-12 col-form-label">@lang('gstin')</label>
                             
                                                     <div class="col-md-12">
                                                         <input id="gstin" type="text" class="form-control t-up" name="gstin" value="{{ $setting->gstin }}">
@@ -131,7 +131,7 @@
 
                                             <div class="col-md-6">
                                                 <div class="form-group row">
-                                                    <label for="panNumber" class="col-md-12 col-form-label">@lang('laryl-settings.form.profile.label.panNumber')</label>
+                                                    <label for="panNumber" class="col-md-12 col-form-label">@lang('panNumber')</label>
                                                     
                                                     <div class="col-md-12">
                                                         <input id="panNumber" type="text" class="form-control t-up" name="panNumber" value="{{ $setting->panNumber }}">
@@ -149,7 +149,7 @@
                                         <div class="form-group row">
                                             
                                             <div class="col-12 col-md-6">
-                                                <label for="bankName" class="col-form-label">@lang('laryl-settings.form.profile.label.bankName')</label>
+                                                <label for="bankName" class="col-form-label">@lang('bankName')</label>
 
                                                 <input type="text" id="bankName" class="form-control" name="bankName" value="{{$setting->bankName}}">
 
@@ -161,7 +161,7 @@
                                             </div>
 
                                             <div class="col-12 col-md-6">
-                                                <label for="bankBranch" class="col-form-label">@lang('laryl-settings.form.profile.label.bankBranch')</label>
+                                                <label for="bankBranch" class="col-form-label">@lang('bankBranch')</label>
 
                                                 <input type="text" id="bankBranch" class="form-control" name="bankBranch" value="{{$setting->bankBranch}}">
 
@@ -177,7 +177,7 @@
                                         <div class="form-group row">
 
                                             <div class="col-12 col-md-6">
-                                                <label for="bankAccount" class="col-form-label">@lang('laryl-settings.form.profile.label.bankAccount')</label>
+                                                <label for="bankAccount" class="col-form-label">@lang('bankAccount')</label>
 
                                                 <input type="text" id="bankAccount" class="form-control" name="bankAccount" value="{{$setting->bankAccount}}">
 
@@ -189,7 +189,7 @@
                                             </div>
 
                                             <div class="col-12 col-md-6">
-                                                <label for="bankIfsc" class="col-form-label">@lang('laryl-settings.form.profile.label.bankIfsc')</label>
+                                                <label for="bankIfsc" class="col-form-label">@lang('bankIfsc')</label>
 
                                                 <input type="text" id="bankIfsc" class="form-control" name="bankIfsc" value="{{$setting->bankIfsc}}">
 
@@ -204,12 +204,12 @@
 
                                         <div class="form-group row">
                                             <div class="col-12 col-md-6">
-                                                <label for="profileLogo" class="col-form-label">@lang('laryl-settings.form.profile.label.profileLogo')</label>
+                                                <label for="profileLogo" class="col-form-label">@lang('profileLogo')</label>
 
                                                 <input type="file" name="profileLogo" class="form-control" />
                                             </div>
                                             <div class="col-12 col-md-6">
-                                                <label for="profileLogo" class="col-form-label">@lang('laryl-settings.form.profile.label.currentLogo')</label>
+                                                <label for="profileLogo" class="col-form-label">@lang('currentLogo')</label>
                                                 @if($setting->logoPath != null)
                                                     <img src="{{asset("storage/swiftbilling/$setting->logoPath")}}" height="100px" />
                                                 @else

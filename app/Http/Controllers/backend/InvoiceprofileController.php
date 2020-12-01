@@ -12,6 +12,7 @@ class InvoiceprofileController extends Controller
     public function index()
 	{
 		$setting = Invoiceprofile::find(1);
+		//dd($setting);
 		return view('backend.companyprofile.invoicesettings', compact('setting'));
 	}
 	public function update(Request $request, $id)
@@ -32,7 +33,7 @@ class InvoiceprofileController extends Controller
 				->withInput($request->input());
 
 		} else {
-
+			//Invoiceprofile::insert($request->except('_token', '_method'));
 			Invoiceprofile::whereId($id)->update($request->except('_token', '_method'));
 
 			// redirect
