@@ -85,9 +85,9 @@
         <div class="top_nav">
             <div class="nav_menu">
                 <nav>
-                    <div class="nav toggle">
+                    <!--<div class="nav toggle">
                         <a id="menu_toggle"><i class="fa fa-bars"></i></a>
-                    </div>
+                    </div>-->
                     <div class="toggle">
             <i class="fa fa-bars menu" aria-hidden="true"></i>
           </div>
