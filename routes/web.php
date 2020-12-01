@@ -142,5 +142,13 @@ Route::group(['middleware' => 'Revalidate'],function() {
          Route::post('/advsalary-store', ['as' => 'backend.advanced_salary.store', 'uses' => 'backend\AdvancedSalaryController@store']);
          Route::get('/advsalary-index', ['as' => 'backend.advanced_salary.index', 'uses' => 'backend\AdvancedSalaryController@index']);
 
+         Route::get('/supplier-list', ['as' => 'backend.supplier.list', 'uses' => 'backend\SupplierController@index']);
+         Route::get('/supplier-create', ['as' => 'backend.supplier.create', 'uses' => 'backend\SupplierController@create']);
+         Route::post('/supplier-store', ['as' => 'backend.supplier.store', 'uses' => 'backend\SupplierController@store']);
+         Route::get('/supplier-show/{id}', ['as' => 'backend.supplier.show', 'uses' => 'backend\SupplierController@show']);
+         Route::get('/supplier-edit/{id}', ['as' => 'backend.supplier.edit', 'uses' => 'backend\SupplierController@edit']);
+         Route::post('/supplier-update', ['as' => 'backend.supplier.update', 'uses' => 'backend\SupplierController@update']);
+         Route::post('/supplier-destroy/{id}', ['as' => 'backend.supplier.destroy', 'uses' => 'backend\SupplierController@destroy']);
+
     });
 });
