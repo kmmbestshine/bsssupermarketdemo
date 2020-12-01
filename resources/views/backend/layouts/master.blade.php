@@ -88,6 +88,9 @@
                     <div class="nav toggle">
                         <a id="menu_toggle"><i class="fa fa-bars"></i></a>
                     </div>
+                    <div class="toggle">
+            <i class="fa fa-bars menu" aria-hidden="true"></i>
+          </div>
 
                     <ul class="nav navbar-nav navbar-right">
                         <li class="">
@@ -130,7 +133,7 @@
                             </ul>
                         </li>
                     </ul>
-                    
+
                 </nav>
             </div>
         </div>
@@ -157,6 +160,49 @@
 <!-- Bootstrap -->
 <script src="{{asset('backend/vendors/bootstrap/dist/js/bootstrap.min.js')}}"></script>
 <script src="{{asset('backend/build/js/custom.min.js')}}"></script>
+
+
+<!-- added by kumaravel -->
+
+
+<script type="text/javascript">
+$(".menu").click(function(){
+  $("ul").slideToggle("slide");
+});
+</script>
+<style type="text/css">
+@media only screen and (max-width: 780px) {
+
+ .toggle {
+   display: block;
+ }
+
+ .toggle i:hover {
+   color: lightblue;
+ }
+
+ ul {
+   width: 100%;
+   display: none;
+ }
+
+ ul li {
+   display: block;
+   text-align: left;
+   padding-left: 2.5rem;
+ }
+
+nav navbar {
+  display: block;
+}
+
+ .slide {
+   display: block;
+ }
+
+}
+
+</style>
 @Yield('script')
 </body>
 </html>
