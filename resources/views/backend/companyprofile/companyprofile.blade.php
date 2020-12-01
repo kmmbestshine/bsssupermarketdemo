@@ -16,7 +16,9 @@
                 <div class="title_right">
                     <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
                         <div class="col-md-5 col-sm-5 col-xs-12 form-group top_search" style="padding-left: 130px;">
-                           
+                           <div class="input-group">
+                                <a href="{{route('invoice.profile.create')}}" class="btn btn-success">Create Invoice Profile</a>
+                            </div>
                         </div>
                     </div>
                 </div>
